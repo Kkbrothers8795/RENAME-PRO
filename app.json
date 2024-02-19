@@ -2,47 +2,57 @@
     "name": "Renamer Bot",
     "description": "Telegram File Renamer Bot ",
     "logo": "https://graph.org/file/91ab4b346dddd0652958c.jpg",
-    "keywords": ["Renamer Bot", "Mongo DB"],    
+    "keywords": ["Renamer Bot", "PostgresSQL"],    
     "repository": "https://github.com/oVo-HxBots/RENAME-PRO",
-    "env": {
-        "API_ID": {
-            "description": "Your APP ID From my.telegram.org ",
-            "value": ""
-        },
-        "API_HASH": {
-            "description": "Your API Hash From my.telegram.org ",
-            "value": ""
-        },
-        "FORCE_SUB": {
-            "description": "Your force sub channel user name without [@] ",
-            "value": "",
-            "required": false 
-        },
-        "BOT_TOKEN": {
-            "description": "Your Bot Token From @BotFather",
-            "value": ""
-        },
-        "ADMIN": {
-            "description":"Add Your User ID multiple is use space to split"
-        },
-        "DB_URL": {
-            "description": "Your Mongo DB URL Obtained From mongodb.com",
-            "value": ""
-        },
-        "DB_NAME":{ 
-            "description":"Your Mongo DB Database Name ",
-            "value": "rename-pro",
-            "required": false
-        },
-        "START_PIC": {
-            "description": "Your Bot start cmd Pic from",
-            "value": "",
-            "required": false
-        }
+   "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
     },
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ]
+    "TG_BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "UPDATE_CHANNEL": {
+      "description": "For Force Subscribe. Paste your channel Username (without @).. Also Make The Bot Admin In That Channel!! ",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "BANNED_USERS": {
+      "description": "Id's Of Users Which You don't Want To Use The Bot..",
+      "value": "",
+      "required": false
+    },
+    "CHUNK_SIZE": {
+      "description": "chunk size that should be used with requests",
+      "value": "128",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
 }
