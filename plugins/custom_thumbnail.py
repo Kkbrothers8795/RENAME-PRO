@@ -7,7 +7,6 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 import os
 import pyrogram
 
-if bool(os.environ.get("WEBHOOK", False)):
 from config import Config
 
 from translation import Translation
