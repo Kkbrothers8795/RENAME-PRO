@@ -10,7 +10,6 @@ import random
 import time
 
 # the secret configuration specific things
-if bool(os.environ.get("WEBHOOK", False)):
 from config import Config
 
 # the Strings used for this "thing"
