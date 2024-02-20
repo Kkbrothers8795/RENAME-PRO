@@ -99,12 +99,12 @@ async def start_me(bot, update):
                         InlineKeyboardButton("Help", callback_data = "ghelp")
                 ],
                 [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/Mai_bOTs'),
-                    InlineKeyboardButton('Feedback', url='https://t.me/No_OnE_Kn0wS_Me')
+                    InlineKeyboardButton('Support Channel', url='https://t.me/HxBots'),
+                    InlineKeyboardButton('Feedback', url='https://t.me/HxSupport')
                 ],
                 [
-                    InlineKeyboardButton('Other Bots', url='https://t.me/Mai_bOTs/17'),
-                    InlineKeyboardButton('Source', url='https://github.com/No-OnE-Kn0wS-Me/FileRenameBot')
+                    InlineKeyboardButton('Creator', url='https://t.me/Kirodewal/'),
+                    InlineKeyboardButton('Source', url='https://github.com/oVo-HxBots/RENAME-PRO')
                 ]
             ]
         )
@@ -112,7 +112,7 @@ async def start_me(bot, update):
             return 
 
 @Client.on_callback_query()
-async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
+async def cb_handler(client: Client , query: CallbackQuery):
     data = query.data
     if data == "rnme":
         await query.message.edit_text(
