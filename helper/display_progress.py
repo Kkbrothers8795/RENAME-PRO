@@ -8,7 +8,6 @@ import os
 import time
 
 # the secret configuration specific things
-if bool(os.environ.get("WEBHOOK", False)):
 from config import Config
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
