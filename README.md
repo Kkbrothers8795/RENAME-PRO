@@ -2,7 +2,7 @@
 
 ### Contents
 - [Info](#info)
-- [Deploy](##deployment-support)
+- [Deploy](#deployment-support)
 - [Configs](#configs)
 - [Bot Commands](#botfather-commands)
 - [Members](#follow-me)
@@ -44,13 +44,12 @@ This is a PowerFull Telegram File Rename and thumbnail & caption Changer Bot wit
 
 * `ADMIN` - AUTH or bot controllers id's multiple id use space to split 
 
-* `DB_URL`  - Mongo Database URL from https://cloud.mongodb.com/
+* `DB_URL`  - Mongo Database URL from [Neon Tech](https://neon.tech/). No Need When Using Heroku.
 
-* `DB_NAME`  - Your database name from mongoDB. Default will be 'my'
+* `DB_NAME`  - Your database name from [Neon Tech](https://neon.tech/). Default will be 'my'. No Need When Using Heroku.
 
-* `FORCE_SUB` - your force sub channel username without @ 
+* `UPDATE_CHANNEL` - your force sub channel username without @ 
 
-* `START_PIC` - start message photo
 
 ### Botfather Commands
 ```
