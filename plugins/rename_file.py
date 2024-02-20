@@ -112,7 +112,7 @@ async def rename_doc(bot, update):
                 await bot.edit_message_text(
                     text=Translation.SAVED_RECVD_DOC_FILE,
                     reply_to_message_id,
-                    chat_id=update.chat.id
+                    chat_id=update.chat.id,
                 )
             except:
                 pass
