@@ -144,7 +144,7 @@ async def convert_to_video(bot, update):
                 pass
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
-                chat_id=update.chat.id
+                chat_id=update.chat.id,
                 disable_web_page_preview=True
             )
     else:
