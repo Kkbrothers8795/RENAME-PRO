@@ -112,7 +112,7 @@ async def rename_doc(bot, update):
                 await bot.edit_message_text(
                     text=Translation.SAVED_RECVD_DOC_FILE,
                     chat_id=update.chat.id,
-                    message=update.reply_to_message
+                    message_id=update.reply_to_message_id
                 )
             except:
                 pass
@@ -121,7 +121,7 @@ async def rename_doc(bot, update):
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
-                 message=update.reply_to_message
+                 message_id=update.reply_to_message_id
                 )
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
@@ -178,7 +178,7 @@ async def rename_doc(bot, update):
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
                 disable_web_page_preview=True,
-               message=update.reply_to_message
+               message_id=update.reply_to_message_id
             )
     else:
         await bot.send_message(
