@@ -175,8 +175,7 @@ async def rename_doc(bot, update):
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
-                disable_web_page_preview=True,
-                reply_to_message_id
+                disable_web_page_preview=True
            )
     else:
         await bot.send_message(
